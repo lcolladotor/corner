@@ -1,0 +1,37 @@
+---
+title: "basic_usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{basic_usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Hi! Our package `corner` solves a problem with `base::head()` when you have a wide matrix and just want to see the first couple of elements.
+
+```{r setup}
+library(corner)
+```
+
+## Usage
+
+```{r}
+set.seed(20190531)
+my_mat <- matrix(rnorm(1000), ncol = 10)
+corner(my_mat)
+
+here::here('vignettes')
+getwd()
+```
+
+## Need help?
+
+Get in touch with Emily E Burke!
+
